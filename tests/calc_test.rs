@@ -9,19 +9,16 @@ use calculation_test::{
     instruction::mock_swap,
 };
 use solana_program_test::*;
-use solana_program::msg;
 // use solana_program::pubkey::Pubkey;
 
 use solana_sdk::{
     account::Account,
-    hash::hashv,
-    signature::{read_keypair_file, Keypair},
+    signature::Keypair,
     signer::Signer,
-    system_instruction::{create_account, create_account_with_seed},
     transaction::Transaction,
 };
 
-use solana_program::{program_option::COption, program_pack::Pack, pubkey::Pubkey};
+use solana_program::{program_pack::Pack, pubkey::Pubkey};
 
 trait AddPacked {
     fn add_packable_account<T: Pack>(

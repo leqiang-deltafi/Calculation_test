@@ -1,10 +1,8 @@
 //! Curve modules
 
 pub mod calc;
-mod pool;
 
 pub use calc::*;
-pub use pool::*;
 
 #[cfg(test)]
 use crate::math::{Decimal, HALF_WAD};
